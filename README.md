@@ -50,7 +50,7 @@ A bash script dumps the MySQL database using consistent transaction flags, compr
 ```bash
 # Verify backup files on S3 via AWS CLI
 aws s3 ls s3://my-portfolio-blog-media-635176221447-ap-southeast-1-an/backups/
-
+```
 ## 4. Repository Structure
 
 ```text
@@ -63,3 +63,4 @@ aws-2tier-wordpress-architecture/
 │   └── backup-proof.png
 └── scripts/
     └── backup_db.sh
+```
