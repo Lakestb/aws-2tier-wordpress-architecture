@@ -1,0 +1,13 @@
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Sid": "AllowPutBackupToS3",
+      "Effect": "Allow",
+      "Action": [
+        "s3:PutObject"
+      ],
+      "Resource": "arn:aws:s3:::my-portfolio-blog-media-635176221447-ap-southeast-1-an/backups/*"
+    }
+  ]
+}

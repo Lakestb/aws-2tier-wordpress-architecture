@@ -1,0 +1,31 @@
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Sid": "AllowPutItemOnGuestbookTable",
+      "Effect": "Allow",
+      "Action": [
+        "dynamodb:PutItem"
+      ],
+      "Resource": "arn:aws:dynamodb:ap-southeast-1:<YOUR_ACCOUNT_ID>:table/GuestbookMessages"
+    },
+    {
+      "Sid": "AllowPublishToGuestbookTopic",
+      "Effect": "Allow",
+      "Action": [
+        "sns:Publish"
+      ],
+      "Resource": "arn:aws:sns:ap-southeast-1:<YOUR_ACCOUNT_ID>:guestbook-new-message"
+    },
+    {
+      "Sid": "AllowCloudWatchLogs",
+      "Effect": "Allow",
+      "Action": [
+        "logs:CreateLogGroup",
+        "logs:CreateLogStream",
+        "logs:PutLogEvents"
+      ],
+      "Resource": "arn:aws:logs:ap-southeast-1:<YOUR_ACCOUNT_ID>:*"
+    }
+  ]
+}
